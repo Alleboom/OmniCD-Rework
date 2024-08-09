@@ -52,12 +52,13 @@ addOnTestMode.Aptechka = function(isTestEnabled)
 	Aptechka:ReconfigureProtected()
 end
 
---[[
+
 addOnTestMode.Cell = function(isTestEnabled)
 	if not CellDB or not CellDB["general"] or not CellDB["general"]["showSolo"] then return end
 	if isTestEnabled then
 		config.Cell = CellDB["general"]["showSolo"]
 		CellDB["general"]["showSolo"] = true
+		print("Testing OC with Cell")
 	else
 		CellDB["general"]["showSolo"] = config.Cell
 		if P.inLockdown then
@@ -67,7 +68,6 @@ addOnTestMode.Cell = function(isTestEnabled)
 	end
 	Cell:Fire("UpdateVisibility", "solo")
 end
-]]
 
 function TM:Test(key)
 	local activeCustomUF = E.customUF.active
