@@ -203,3 +203,5 @@ E.write = function(...)
 end
 
 E.BLANK = {}
+E.Debug = true
+

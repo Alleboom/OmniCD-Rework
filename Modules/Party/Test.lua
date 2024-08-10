@@ -23,6 +23,8 @@ addOnTestMode.Grid2 = function(isTestEnabled)
 	else
 		Grid2Options.editedTheme.layout.layouts["solo"] = config.Grid2
 	end
+	print(E)
+	print(P)
 	Grid2Layout:ReloadLayout()
 end
 
@@ -58,7 +60,8 @@ addOnTestMode.Cell = function(isTestEnabled)
 	if isTestEnabled then
 		config.Cell = CellDB["general"]["showSolo"]
 		CellDB["general"]["showSolo"] = true
-		print("Testing OC with Cell")
+		ViragDevTool_AddData(CellDB, "CellDB")
+		ViragDevTool_AddData(Cell, "Cell")
 	else
 		CellDB["general"]["showSolo"] = config.Cell
 		if P.inLockdown then

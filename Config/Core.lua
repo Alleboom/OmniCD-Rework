@@ -129,6 +129,14 @@ local function GetOptions()
 							get = getGlobalOption,
 							set = setGlobalOption,
 						},
+						debug = {
+							name  = L["Debug"],
+							order = 16,
+							type = "toggle",
+							desc = "Enable Debug Mode with Virage Dev tools",
+							get = getGlobalOption,
+							set = setGlobalOption,
+						},
 
 						minusScale = {
 							disabled = function() return E.global.optionPanelScale < 0.84 end,
