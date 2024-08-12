@@ -60,8 +60,10 @@ addOnTestMode.Cell = function(isTestEnabled)
 	if isTestEnabled then
 		config.Cell = CellDB["general"]["showSolo"]
 		CellDB["general"]["showSolo"] = true
-		ViragDevTool_AddData(CellDB, "CellDB")
-		ViragDevTool_AddData(Cell, "Cell")
+		if (E.global["VDTdebug"] ==  true) then
+			ViragDevTool_AddData(E,"E")
+			ViragDevTool_AddData(E.options.args.Home.args, "general?")
+		end
 	else
 		CellDB["general"]["showSolo"] = config.Cell
 		if P.inLockdown then

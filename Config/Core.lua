@@ -129,8 +129,8 @@ local function GetOptions()
 							get = getGlobalOption,
 							set = setGlobalOption,
 						},
-						debug = {
-							name  = L["Debug"],
+						VDTdebug = {
+							name  = L["VDT Debug"],
 							order = 16,
 							type = "toggle",
 							desc = "Enable Debug Mode with Virage Dev tools",
