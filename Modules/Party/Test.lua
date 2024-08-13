@@ -80,10 +80,15 @@ function TM:Test(key)
 	local groupSize = GetNumGroupMembers()
 
 	P.isInTestMode = not P.isInTestMode
+	-- Think this is before any debug code is ran, adding a debug variable here to check
+	AddDebugVariable(activeCustomUF, "activeCustomUF_precheck?")
 
 	if P.isInTestMode then
 		if not E.db.position.detached and groupSize < 1 and activeCustomUF and not addOnTestMode[activeCustomUF] then
 			E.write(format(E.STR.UNSUPPORTED_ADDON, activeCustomUF))
+			-- adding debug commands to see if Cell gets cut off here
+			AddDebugVariable(addOnTestMode, "Addon Test Mode")
+			AddDebugVariable(groupsize, "groupsize")
 		end
 
 		if P.inLockdown then
