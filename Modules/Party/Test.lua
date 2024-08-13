@@ -61,7 +61,7 @@ addOnTestMode.Cell = function(isTestEnabled)
 	if isTestEnabled then
 		config.Cell = CellDB["general"]["showSolo"]
 		CellDB["general"]["showSolo"] = true
-		if (E.global["VDTdebug"] ==  true) then
+		if (E.global["DevDebug"] ==  true) then
 			ViragDevTool_AddData(E,"E")
 		end
 	else

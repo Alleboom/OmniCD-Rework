@@ -130,10 +130,10 @@ local function GetOptions()
 							set = setGlobalOption,
 						},
 						VDTdebug = {
-							name  = L["VDT Debug"],
+							name  = L["DevDebug"],
 							order = 16,
 							type = "toggle",
-							desc = "Enable Debug Mode with Virage Dev tools",
+							desc = "Enable Debug Mode with Dev tools",
 							get = getGlobalOption,
 							set = setGlobalOption,
 						},
