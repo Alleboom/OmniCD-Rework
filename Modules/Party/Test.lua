@@ -56,13 +56,13 @@ end
 
 
 addOnTestMode.Cell = function(isTestEnabled)
+	-- Looks like this checks for the existence of cell?
 	if not CellDB or not CellDB["general"] or not CellDB["general"]["showSolo"] then return end
 	if isTestEnabled then
 		config.Cell = CellDB["general"]["showSolo"]
 		CellDB["general"]["showSolo"] = true
 		if (E.global["VDTdebug"] ==  true) then
 			ViragDevTool_AddData(E,"E")
-			ViragDevTool_AddData(E.options.args.Home.args, "general?")
 		end
 	else
 		CellDB["general"]["showSolo"] = config.Cell
